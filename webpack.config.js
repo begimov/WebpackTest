@@ -10,13 +10,13 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
+                use: ['style-loader', 'css-loader']
             }
         ]
     },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         port: 9090,
-        compress: true,
-        open: true
+        compress: true
     }
 }

@@ -1,1 +1,1 @@
-console.log('test5')
+import './assets/styles/app.css'
