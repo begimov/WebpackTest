@@ -6,6 +6,13 @@ module.exports = {
         filename: 'js/app.js',
         path: path.resolve(__dirname, 'dist')
     },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+            }
+        ]
+    },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         port: 9090,
