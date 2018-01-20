@@ -4,7 +4,7 @@ const path = require('path')
 
 module.exports = merge(base, {
     devServer: {
-        contentBase: path.join(__dirname, 'dist'),
+        contentBase: path.join(__dirname, '../dist'),
         port: 9090,
         compress: true
     }
