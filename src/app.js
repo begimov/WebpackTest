@@ -12,3 +12,7 @@ n = {
 }
 
 console.log(n)
+
+if (process.env.NODE_ENV === 'production') {
+    console.log('PRODUCTION')
+}
