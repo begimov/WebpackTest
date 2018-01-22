@@ -8,7 +8,7 @@ let n = {
 
 n = {
     ...n,
-    c: false
+    c: true
 }
 
 console.log(n)
