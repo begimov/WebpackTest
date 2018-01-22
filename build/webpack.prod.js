@@ -3,6 +3,7 @@ const merge = require('webpack-merge')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 
 const env = require('../config/prod.env')
 
@@ -25,6 +26,7 @@ module.exports = merge(base, {
         }),
         new ExtractTextPlugin({
             filename: '../dist/css/app.css'
-        })
+        }),
+        new OptimizeCSSPlugin()
     ]
 })
