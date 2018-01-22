@@ -3,7 +3,7 @@ const merge = require('webpack-merge')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const webpack = require('webpack')
 
-const env = require('..config/prod.env')
+const env = require('../config/prod.env')
 
 module.exports = merge(base, {
     plugins: [
