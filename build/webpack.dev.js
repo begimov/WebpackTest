@@ -6,6 +6,7 @@ const webpack = require('webpack')
 const env = require('../config/dev.env')
 
 module.exports = merge(base, {
+    devtool: '#cheap-module-eval-source-map',
     module: {
         rules: [
             {
