@@ -1,7 +1,7 @@
-import './assets/styles/app.scss'
-// import './assets/styles/app.less'
+import 'styles/app.scss'
+// import '@/assets/styles/app.less'
 
-import * as api from './app/api'
+import * as api from '@/app/api'
 
 let n = {
     a: true,
