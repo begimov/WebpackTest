@@ -1,6 +1,8 @@
 import './assets/styles/app.scss'
 // import './assets/styles/app.less'
 
+import * as api from './app/api'
+
 let n = {
     a: true,
     b: true
@@ -18,3 +20,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 console.log(process.env.API_URL)
+
+api.getPosts().then((res) => {
+    console.log(res)
+})
