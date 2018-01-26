@@ -8,6 +8,7 @@ const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const env = require('../config/prod.env')
 
 module.exports = merge(base, {
+    devtool: '#source-map',
     module: {
         rules: [
             {
@@ -20,13 +21,21 @@ module.exports = merge(base, {
         ]
     },
     plugins: [
-        new UglifyJSPlugin(),
+        new UglifyJSPlugin({
+            sourceMap: true
+        }),
         new webpack.DefinePlugin({
             'process.env': JSON.stringify(env)
         }),
         new ExtractTextPlugin({
             filename: '../dist/css/app.css'
         }),
-        new OptimizeCSSPlugin()
+        new OptimizeCSSPlugin({
+            cssProcessorOptions: {
+                map: {
+                    inline: false
+                }
+            }
+        })
     ]
 })
